@@ -141,7 +141,7 @@ export default function Contact() {
                 Location
               </h3>
               <p className="text-gray-700">
-                P.O. Box 1438, 3rd Floor GCB Bank, Tamale Main
+                Angels Hill Montessori, Tamale, Ghana
               </p>
             </div>
 
@@ -249,7 +249,7 @@ export default function Contact() {
                   loading="lazy"
                   allowFullScreen
                   referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7589346199935!2d-0.6031!3d9.2739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfd4b8e8e8e8e8e8d%3A0x8e8e8e8e8e8e8e8e!2sGCB%20Bank%2C%20Tamale!5e0!3m2!1sen!2sgh!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0123!2d-0.8897!3d9.4788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfd43f4a5d729a47%3A0xca943cac641e79e1!2sAngels%20Hill%20Montessori!5e0!3m2!1sen!2sgh!4v1717927000000!5m2!1sen!2sgh"
                 />
               </div>
 

@@ -108,7 +108,7 @@ export default function Footer() {
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-[#F59E0B]" />
                 <span className="text-gray-300">
-                  GCB Bank, Tamale Main, Ghana
+                  Angels Hill Montessori, Tamale, Ghana
                 </span>
               </li>
               <li className="flex items-start gap-2">
