@@ -22,7 +22,7 @@ export function JobSeekerConfirmation() {
           </h1>
 
           <p className="text-xl text-gray-300 mb-6">
-            Thank you for registering with Hope Services Centre. Your job seeker profile has been submitted successfully.
+            Thank you for registering with ANGELS HILL MONTESSORI. Your job seeker profile has been submitted successfully.
           </p>
 
           <div className="bg-white bg-opacity-10 rounded-lg p-8 mb-8 backdrop-blur-sm">
@@ -88,7 +88,7 @@ export function EmployerConfirmation() {
           </h1>
 
           <p className="text-xl text-gray-300 mb-6">
-            Your job opening has been posted on Hope Services Centre and is now visible to qualified candidates.
+            Your job opening has been posted on ANGELS HILL MONTESSORI and is now visible to qualified candidates.
           </p>
 
           <div className="bg-white bg-opacity-10 rounded-lg p-8 mb-8 backdrop-blur-sm">
@@ -154,7 +154,7 @@ export function ContactConfirmation() {
           </h1>
 
           <p className="text-xl text-gray-300 mb-6">
-            Thank you for contacting Hope Services Centre. We've received your message and will get back to you soon.
+            Thank you for contacting ANGELS HILL MONTESSORI. We've received your message and will get back to you soon.
           </p>
 
           <div className="bg-white bg-opacity-10 rounded-lg p-8 mb-8 backdrop-blur-sm">

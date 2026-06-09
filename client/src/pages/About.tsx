@@ -12,7 +12,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">About Us</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Learn more about Hope Services Centre and our commitment to excellence
+            Learn more about ANGELS HILL MONTESSORI and our commitment to excellence
           </p>
         </div>
       </section>
@@ -26,7 +26,7 @@ export default function About() {
                 Who We Are
               </h2>
               <p className="text-gray-700 text-lg leading-relaxed mb-4">
-                Hope Services Centre is a management consultancy firm established with specialization to provide human resources needs to companies and other customized and innovative consultancy services to address the capacity needs of its clients.
+                ANGELS HILL MONTESSORI is a management consultancy firm established with specialization to provide human resources needs to companies and other customized and innovative consultancy services to address the capacity needs of its clients.
               </p>
               <p className="text-gray-700 text-lg leading-relaxed">
                 With over a decade of experience, we have built a pool of professionals dedicated to delivering exceptional results across multiple sectors.
@@ -137,7 +137,7 @@ export default function About() {
 
           <div className="bg-white rounded-lg shadow-md p-8 space-y-6">
             <p className="text-gray-700 text-lg">
-              Hope Services Centre is a limited liability company registered under the laws of the Republic of Ghana.
+              ANGELS HILL MONTESSORI is a limited liability company registered under the laws of the Republic of Ghana.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -170,7 +170,7 @@ export default function About() {
       <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] text-center mb-16">
-            Why Choose Hope Services Centre?
+            Why Choose ANGELS HILL MONTESSORI?
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

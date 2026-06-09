@@ -154,11 +154,11 @@ export default function AdminDashboard() {
   const sendWhatsAppMessage = (phone: string, name: string, type: string) => {
     let message = "";
     if (type === "jobSeeker") {
-      message = `Hi ${name}, Thank you for registering with Hope Services Centre! We have received your profile and will review it shortly. We'll contact you soon with job opportunities. Best regards, Hope Services Centre`;
+      message = `Hi ${name}, Thank you for registering with ANGELS HILL MONTESSORI! We have received your profile and will review it shortly. We'll contact you soon with job opportunities. Best regards, ANGELS HILL MONTESSORI`;
     } else if (type === "employer") {
-      message = `Hi ${name}, Thank you for posting a job with Hope Services Centre! Your job listing is now live and visible to qualified candidates. We'll notify you of new applications. Best regards, Hope Services Centre`;
+      message = `Hi ${name}, Thank you for posting a job with ANGELS HILL MONTESSORI! Your job listing is now live and visible to qualified candidates. We'll notify you of new applications. Best regards, ANGELS HILL MONTESSORI`;
     } else if (type === "contact") {
-      message = `Hi ${name}, Thank you for contacting Hope Services Centre! We have received your message and will get back to you within 24 hours. Best regards, Hope Services Centre`;
+      message = `Hi ${name}, Thank you for contacting ANGELS HILL MONTESSORI! We have received your message and will get back to you within 24 hours. Best regards, ANGELS HILL MONTESSORI`;
     }
 
     const encodedMessage = encodeURIComponent(message);
@@ -173,13 +173,13 @@ export default function AdminDashboard() {
 
     if (type === "jobSeeker") {
       subject = `Application Received - ${item.surname}`;
-      body = `Dear ${item.surname},\n\nThank you for registering with Hope Services Centre. We have received your profile and CV.\n\nYour Details:\n- Job Title: ${item.jobTitle}\n- Email: ${item.email}\n- Phone: ${item.telephone}\n\nWe will review your profile and contact you soon with suitable job opportunities.\n\nBest regards,\nHope Services Centre Team`;
+      body = `Dear ${item.surname},\n\nThank you for registering with ANGELS HILL MONTESSORI. We have received your profile and CV.\n\nYour Details:\n- Job Title: ${item.jobTitle}\n- Email: ${item.email}\n- Phone: ${item.telephone}\n\nWe will review your profile and contact you soon with suitable job opportunities.\n\nBest regards,\nANGELS HILL MONTESSORI Team`;
     } else if (type === "employer") {
       subject = `Job Posted Successfully - ${item.positionRequired}`;
-      body = `Dear ${item.contactPerson},\n\nYour job posting has been successfully posted on Hope Services Centre.\n\nJob Details:\n- Position: ${item.positionRequired}\n- Organization: ${item.organizationName}\n- Contract Type: ${item.contractType}\n\nYour job is now visible to all job seekers on our platform. We'll notify you of new applications.\n\nBest regards,\nHope Services Centre Team`;
+      body = `Dear ${item.contactPerson},\n\nYour job posting has been successfully posted on ANGELS HILL MONTESSORI.\n\nJob Details:\n- Position: ${item.positionRequired}\n- Organization: ${item.organizationName}\n- Contract Type: ${item.contractType}\n\nYour job is now visible to all job seekers on our platform. We'll notify you of new applications.\n\nBest regards,\nANGELS HILL MONTESSORI Team`;
     } else if (type === "contact") {
       subject = `Message Received - ${item.subject}`;
-      body = `Dear ${item.name},\n\nThank you for contacting Hope Services Centre. We have received your message:\n\n"${item.message}"\n\nWe will review your inquiry and get back to you within 24 hours.\n\nBest regards,\nHope Services Centre Team`;
+      body = `Dear ${item.name},\n\nThank you for contacting ANGELS HILL MONTESSORI. We have received your message:\n\n"${item.message}"\n\nWe will review your inquiry and get back to you within 24 hours.\n\nBest regards,\nANGELS HILL MONTESSORI Team`;
     }
 
     return { subject, body };

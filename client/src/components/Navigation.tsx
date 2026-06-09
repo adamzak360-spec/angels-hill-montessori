@@ -35,12 +35,12 @@ export default function Navigation() {
             <div className="bg-[#0A2540] p-1.5 rounded-lg flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
               <img
                 src="/assets/logo.png"
-                alt="Hope Services Centre Logo"
+                alt="ANGELS HILL MONTESSORI Logo"
                 className="h-10 w-auto object-contain mix-blend-screen brightness-110"
               />
             </div>
             <span className="hidden sm:inline font-bold text-[#0A2540] text-xl tracking-tight">
-              Hope Services
+              ANGELS HILL MONTESSORI
             </span>
           </Link>
 

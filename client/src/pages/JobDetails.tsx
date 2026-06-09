@@ -26,7 +26,7 @@ export default function JobDetails() {
   const jobsData: Record<string, any> = {
     "driver": {
       title: "Drivers",
-      company: "Hope Services Recruitment Limited",
+      company: "ANGELS HILL MONTESSORI Recruitment Limited",
       location: "Tamale",
       salary: "Very Attractive",
       type: "Full-time",
@@ -57,7 +57,7 @@ Only shortlisted candidates will be contacted.`,
     },
     "domestic-worker": {
       title: "Domestic Workers",
-      company: "Hope Services Recruitment Limited",
+      company: "ANGELS HILL MONTESSORI Recruitment Limited",
       location: "Tamale",
       salary: "Competitive",
       type: "Full-time",
@@ -84,7 +84,7 @@ Only shortlisted candidates will be contacted.`,
     },
     "teachers": {
       title: "Teachers (Pre-school & Basic School)",
-      company: "Hope Services Recruitment Limited",
+      company: "ANGELS HILL MONTESSORI Recruitment Limited",
       location: "Kalpohini Yapalsi - Tamale",
       salary: "Competitive",
       type: "Full-time",

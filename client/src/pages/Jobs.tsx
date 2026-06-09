@@ -22,7 +22,7 @@ const staticJobsData: Job[] = [
   {
     id: "posted-1",
     title: "Drivers",
-    company: "Hope Services Recruitment Limited",
+    company: "ANGELS HILL MONTESSORI Recruitment Limited",
     location: "Tamale",
     salary: "Very Attractive",
     type: "Full-time",
@@ -33,7 +33,7 @@ const staticJobsData: Job[] = [
   {
     id: "posted-2",
     title: "Domestic Workers",
-    company: "Hope Services Recruitment Limited",
+    company: "ANGELS HILL MONTESSORI Recruitment Limited",
     location: "Tamale",
     salary: "Competitive",
     type: "Full-time",
@@ -44,7 +44,7 @@ const staticJobsData: Job[] = [
   {
     id: "posted-3",
     title: "Teachers (Pre-school & Basic School)",
-    company: "Hope Services Recruitment Limited",
+    company: "ANGELS HILL MONTESSORI Recruitment Limited",
     location: "Kalpohini Yapalsi - Tamale",
     salary: "Competitive",
     type: "Full-time",
@@ -55,7 +55,7 @@ const staticJobsData: Job[] = [
   {
     id: "posted-4",
     title: "Accounts Officers",
-    company: "Hope Services Recruitment Limited",
+    company: "ANGELS HILL MONTESSORI Recruitment Limited",
     location: "Tamale",
     salary: "GHS 5,500",
     type: "Full-time",
@@ -66,7 +66,7 @@ const staticJobsData: Job[] = [
   {
     id: "posted-5",
     title: "Personal Assistant",
-    company: "Hope Services Recruitment Limited",
+    company: "ANGELS HILL MONTESSORI Recruitment Limited",
     location: "Tamale",
     salary: "Competitive",
     type: "Full-time",

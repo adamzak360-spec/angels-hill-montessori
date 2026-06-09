@@ -113,7 +113,7 @@ export function generateNotificationData(
   formData: Record<string, any>
 ): NotificationData {
   let recipientEmail = "hope.services@ymail.com";
-  let recipientName = "Hope Services Centre Team";
+  let recipientName = "ANGELS HILL MONTESSORI Team";
 
   if (type === "jobSeeker") {
     recipientEmail = formData.email;

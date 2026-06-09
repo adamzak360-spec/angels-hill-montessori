@@ -19,10 +19,10 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <img
                 src="/assets/logo.png"
-                alt="Hope Services Centre Logo"
+                alt="ANGELS HILL MONTESSORI Logo"
                 className="h-14 w-auto object-contain mix-blend-screen brightness-110"
               />
-              <span className="font-bold text-xl tracking-tight">Hope Services</span>
+              <span className="font-bold text-xl tracking-tight">ANGELS HILL MONTESSORI</span>
             </div>
             <p className="text-gray-300 text-sm">
               Professional recruitment and consultancy services in Tamale, Ghana.
@@ -122,7 +122,7 @@ export default function Footer() {
         {/* Social Links & Copyright */}
         <div className="border-t border-gray-700 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm">
-            &copy; {currentYear} Hope Services Centre. All rights reserved.
+            &copy; {currentYear} ANGELS HILL MONTESSORI. All rights reserved.
           </p>
           <div className="flex gap-5">
             <a
