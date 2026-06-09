@@ -36,7 +36,7 @@ export default function Navigation() {
               <img
                 src="/assets/logo.png"
                 alt="ANGELS HILL MONTESSORI Logo"
-                className="h-10 w-auto object-contain mix-blend-screen brightness-110"
+                className="h-10 w-auto object-contain"
               />
             </div>
             <span className="hidden sm:inline font-bold text-[#0A2540] text-xl tracking-tight">

@@ -20,7 +20,7 @@ export default function Footer() {
               <img
                 src="/assets/logo.png"
                 alt="ANGELS HILL MONTESSORI Logo"
-                className="h-14 w-auto object-contain mix-blend-screen brightness-110"
+                className="h-14 w-auto object-contain"
               />
               <span className="font-bold text-xl tracking-tight">ANGELS HILL MONTESSORI</span>
             </div>
