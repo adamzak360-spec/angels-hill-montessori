@@ -15,6 +15,11 @@ export default function Home() {
 
   const slides = [
     {
+      video: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663580544514/cSwMYWXxvJDloazn.mp4",
+      title: "Congratulations Class of 2025",
+      subtitle: "Celebrating our students' success",
+    },
+    {
       image:
         "https://d2xsxph8kpxj0f.cloudfront.net/310519663591823588/EJoBp6DuLE5BTpXoGSpSoP/hero-recruitment-team-SEETKqwZ7emCznKB9HFwA6.webp",
       title: "Find Your Perfect Career",
@@ -52,11 +57,22 @@ export default function Home() {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-full object-cover"
-            />
+            {slide.video ? (
+              <video
+                src={slide.video}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover"
+              />
+            )}
             <div className="absolute inset-0 bg-black/40" />
           </div>
         ))}
