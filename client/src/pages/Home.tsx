@@ -12,13 +12,18 @@ export default function Home() {
 
   const slides = [
     {
-      video: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663580544514/cSwMYWXxvJDloazn.mp4",
+      image: "/assets/hero-graduation.webp",
       title: "Inspiring Young Minds for a Brighter Future",
       subtitle: "Quality Montessori Education from Creche to Junior High School in a Safe and Caring Learning Environment.",
     },
     {
-      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
+      video: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663580544514/cSwMYWXxvJDloazn.mp4",
       title: "Excellence in Education",
+      subtitle: "Nurturing character and lifelong learning in every child.",
+    },
+    {
+      image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=2022&auto=format&fit=crop",
+      title: "Celebrating Student Success",
       subtitle: "Nurturing character and lifelong learning in every child.",
     },
     {
