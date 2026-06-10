@@ -1,24 +1,27 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { toast } from "sonner";
 
 /**
  * Contact Page
- * Design: Contact form with company information and maps
+ * Design: Contact form with school information and maps
  * Integrates FormSubmit.co for automatic email sending
  */
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: "",
+    parentName: "",
     email: "",
-    subject: "",
+    phoneNumber: "",
+    classLevel: "",
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const classLevels = ["Creche", "Nursery", "Kindergarten", "Primary", "J.H.S."];
+
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -28,7 +31,7 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (!formData.name || !formData.email || !formData.message) {
+    if (!formData.parentName || !formData.email || !formData.message) {
       toast.error("Please fill in all required fields");
       setIsSubmitting(false);
       return;
@@ -37,11 +40,13 @@ export default function Contact() {
     try {
       const submitData = new FormData();
 
-      Object.entries(formData).forEach(([key, value]) => {
-        submitData.append(key, value);
-      });
+      submitData.append("parentName", formData.parentName);
+      submitData.append("email", formData.email);
+      submitData.append("phoneNumber", formData.phoneNumber);
+      submitData.append("classLevel", formData.classLevel);
+      submitData.append("message", formData.message);
 
-      submitData.append("_subject", `New Contact Message from ${formData.name}`);
+      submitData.append("_subject", `New Enquiry from ${formData.parentName}`);
       submitData.append("_captcha", "false");
       submitData.append("_next", `${window.location.origin}/contact-confirmation`);
 
@@ -67,7 +72,7 @@ export default function Contact() {
         toast.success(
           "Message sent successfully! Check your email for confirmation."
         );
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setFormData({ parentName: "", email: "", phoneNumber: "", classLevel: "", message: "" });
       } else {
         toast.error("Failed to send message. Please try again.");
       }
@@ -84,10 +89,9 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="bg-[#0A2540] text-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Angels Hill Montessori School</h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-            Get in touch with our team. We're here to help with your recruitment
-            and career needs.
+            We would love to hear from you. Contact us today to learn more about our academic programmes, admission process or to schedule a school visit.
           </p>
         </div>
       </section>
@@ -95,34 +99,29 @@ export default function Contact() {
       {/* Contact Information */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Phone 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* School Name */}
+            <div className="bg-white rounded-lg shadow-md p-8 text-center">
+              <div className="w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                </svg>
+              </div>
+              <h3 className="text-lg font-bold text-[#0A2540] mb-2">School Name</h3>
+              <p className="text-gray-700">Angels Hill Montessori School</p>
+            </div>
+
+            {/* Phone */}
             <div className="bg-white rounded-lg shadow-md p-8 text-center">
               <div className="w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#0A2540] mb-2">Phone</h3>
-              <div className="space-y-2">
-                <a
-                  href="tel:0242367273"
-                  className="text-gray-700 hover:text-[#F59E0B] transition-colors block"
-                >
-                  0242367273
-                </a>
-              </div>
-            </div>
-
-            {/* Email */}
-            <div className="bg-white rounded-lg shadow-md p-8 text-center">
-              <div className="w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-[#0A2540] mb-2">Email</h3>
               <a
-                href="mailto:info@angelshill.edu.gh"
-                className="text-gray-700 hover:text-[#F59E0B] transition-colors"
+                href="tel:0242367273"
+                className="text-gray-700 hover:text-[#F59E0B] transition-colors block"
               >
-                info@angelshill.edu.gh
+                0242367273
               </a>
             </div>
 
@@ -131,23 +130,12 @@ export default function Contact() {
               <div className="w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-[#0A2540] mb-2">
-                Location
-              </h3>
-              <p className="text-gray-700">
-                Malshegu – Kumbuyili Road, Opp. St. Victor Major Seminary, Tamale, Ghana
+              <h3 className="text-lg font-bold text-[#0A2540] mb-2">Location</h3>
+              <p className="text-gray-700 text-sm">
+                Malshegu – Kumbuyili Road<br />
+                Opposite St. Victor Major Seminary<br />
+                Tamale, Ghana
               </p>
-            </div>
-
-            {/* Digital Address */}
-            <div className="bg-white rounded-lg shadow-md p-8 text-center">
-              <div className="w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-[#0A2540] mb-2">
-                Digital Address
-              </h3>
-              <p className="text-gray-700">NT-0003-5187</p>
             </div>
           </div>
         </div>
@@ -160,17 +148,17 @@ export default function Contact() {
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-bold text-[#0A2540] mb-8">
-                Send us a Message
+                Send us an Enquiry
               </h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Name *
+                    Parent/Guardian Name *
                   </label>
                   <input
                     type="text"
-                    name="name"
-                    value={formData.name}
+                    name="parentName"
+                    value={formData.parentName}
                     onChange={handleInputChange}
                     placeholder="Your full name"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent outline-none"
@@ -180,7 +168,7 @@ export default function Contact() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Email *
+                    Email Address *
                   </label>
                   <input
                     type="email"
@@ -195,16 +183,35 @@ export default function Contact() {
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject
+                    Phone Number
                   </label>
                   <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
+                    type="tel"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
                     onChange={handleInputChange}
-                    placeholder="What is this about?"
+                    placeholder="Your phone number"
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent outline-none"
                   />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Child's Class Level
+                  </label>
+                  <select
+                    name="classLevel"
+                    value={formData.classLevel}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent outline-none bg-white"
+                  >
+                    <option value="">Select a class level</option>
+                    {classLevels.map((level) => (
+                      <option key={level} value={level}>
+                        {level}
+                      </option>
+                    ))}
+                  </select>
                 </div>
 
                 <div>
@@ -215,7 +222,7 @@ export default function Contact() {
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    placeholder="Your message"
+                    placeholder="Your message or enquiry"
                     rows={6}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#F59E0B] focus:border-transparent outline-none resize-none"
                     required
@@ -227,7 +234,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                   className="w-full bg-[#F59E0B] hover:bg-[#D97706] text-black font-semibold py-3 text-lg"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Sending..." : "Send Enquiry"}
                 </Button>
               </form>
             </div>
@@ -235,16 +242,26 @@ export default function Contact() {
             {/* Map & Quick Contact */}
             <div className="space-y-8">
               {/* Map */}
-              <div className="bg-gray-200 rounded-lg overflow-hidden h-96">
-                <iframe
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0123!2d-0.8897!3d9.4788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfd43f4a5d729a47%3A0xca943cac641e79e1!2sAngels%20Hill%20Montessori!5e0!3m2!1sen!2sgh!4v1717927000000!5m2!1sen!2sgh"
-                />
+              <div>
+                <h3 className="text-2xl font-bold text-[#0A2540] mb-4">Find Us</h3>
+                <div className="bg-gray-200 rounded-lg overflow-hidden h-96">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0123!2d-0.8897!3d9.4788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfd43f4a5d729a47%3A0xca943cac641e79e1!2sAngels%20Hill%20Montessori!5e0!3m2!1sen!2sgh!4v1717927000000!5m2!1sen!2sgh"
+                  />
+                </div>
+              </div>
+
+              {/* Map Info */}
+              <div className="bg-white rounded-lg border border-gray-200 p-6">
+                <p className="text-gray-700 font-medium mb-2">Malshegu – Kumbuyili Road</p>
+                <p className="text-gray-600">Opp. St. Victor Major Seminary</p>
+                <p className="text-gray-600">Tamale, Ghana</p>
               </div>
 
               {/* Quick Contact Options */}
@@ -296,36 +313,6 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Business Hours */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] text-center mb-12">
-            Business Hours
-          </h2>
-
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-bold text-[#0A2540] mb-4">
-                  Monday - Friday
-                </h3>
-                <p className="text-gray-700 text-lg">9:00 AM - 5:00 PM</p>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-[#0A2540] mb-4">
-                  Saturday - Sunday
-                </h3>
-                <p className="text-gray-700 text-lg">Closed</p>
-              </div>
-            </div>
-            <p className="text-gray-600 text-sm mt-6 pt-6 border-t border-gray-200">
-              We respond to emails and messages within 24 hours during business
-              days.
-            </p>
           </div>
         </div>
       </section>

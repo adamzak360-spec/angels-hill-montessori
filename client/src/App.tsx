@@ -9,6 +9,8 @@ import About from "./pages/About";
 import Academics from "./pages/Academics";
 import Admissions from "./pages/Admissions";
 import Gallery from "./pages/Gallery";
+import News from "./pages/News";
+import FAQ from "./pages/FAQ";
 import Jobs from "./pages/Jobs";
 import JobDetails from "./pages/JobDetails";
 import Employers from "./pages/Employers";
@@ -31,6 +33,8 @@ function Router() {
       <Route path={"/academics"} component={Academics} />
       <Route path={"/admissions"} component={Admissions} />
       <Route path={"/gallery"} component={Gallery} />
+      <Route path={"/news"} component={News} />
+      <Route path={"/faq"} component={FAQ} />
       <Route path={"/jobs"} component={Jobs} />
       <Route path={"/jobs/:id"} component={JobDetails} />
       <Route path={"/employers"} component={Employers} />

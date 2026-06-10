@@ -154,7 +154,7 @@ export function ContactConfirmation() {
           </h1>
 
           <p className="text-xl text-gray-300 mb-6">
-            Thank you for contacting ANGELS HILL MONTESSORI. We've received your message and will get back to you soon.
+            Thank you for contacting Angels Hill Montessori School. We've received your enquiry and will get back to you soon.
           </p>
 
           <div className="bg-white bg-opacity-10 rounded-lg p-8 mb-8 backdrop-blur-sm">
@@ -163,7 +163,7 @@ export function ContactConfirmation() {
               <div className="text-left">
                 <h3 className="text-lg font-bold mb-2">We'll Be in Touch</h3>
                 <p className="text-gray-300">
-                  Our team typically responds to messages within 24 hours during business days (Monday - Friday, 9:00 AM - 5:00 PM). Check your email for our response.
+                  Our team typically responds to enquiries within 24 hours during business days (Monday - Friday, 9:00 AM - 5:00 PM). Check your email for our response.
                 </p>
               </div>
             </div>
@@ -171,12 +171,12 @@ export function ContactConfirmation() {
 
           <div className="space-y-4">
             <p className="text-gray-300">
-              In the meantime, feel free to explore our services or contact us directly via phone or WhatsApp for urgent matters.
+              In the meantime, feel free to explore our website or contact us directly via phone or WhatsApp for urgent matters.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://wa.me/233243105412"
+                href="https://wa.me/233242367273"
                 target="_blank"
                 rel="noopener noreferrer"
               >

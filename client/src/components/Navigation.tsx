@@ -23,6 +23,7 @@ export default function Navigation() {
     { label: "Admissions", href: "/admissions" },
     { label: "Gallery", href: "/gallery" },
     { label: "News & Events", href: "/news" },
+    { label: "FAQ", href: "/faq" },
     { label: "Contact Us", href: "/contact" },
   ];
 

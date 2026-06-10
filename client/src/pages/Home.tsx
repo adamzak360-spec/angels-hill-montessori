@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Users, Heart, Trophy, CheckCircle2, CheckCircle } from "lucide-react";
+import { ArrowRight, GraduationCap, Users, Heart, Trophy, CheckCircle2, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
 
 /**
  * Home Page
@@ -9,6 +9,7 @@ import { ArrowRight, GraduationCap, Users, Heart, Trophy, CheckCircle2, CheckCir
  */
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const slides = [
     {
@@ -33,6 +34,24 @@ export default function Home() {
     },
   ];
 
+  const testimonials = [
+    {
+      text: "Angels Hill Montessori School has helped my child become more confident and independent. The teachers are caring and dedicated.",
+      author: "Parent",
+      role: "Parent of Kindergarten Student"
+    },
+    {
+      text: "The school's learning environment is excellent and the academic progress of my child has been remarkable.",
+      author: "Parent",
+      role: "Parent of Primary Student"
+    },
+    {
+      text: "We appreciate the discipline, quality teaching and personal attention given to every child.",
+      author: "Parent",
+      role: "Parent of Nursery Student"
+    }
+  ];
+
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -40,7 +59,22 @@ export default function Home() {
     return () => clearInterval(timer);
   }, [slides.length]);
 
+  useEffect(() => {
+    const testimonialTimer = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 6000);
+    return () => clearInterval(testimonialTimer);
+  }, [testimonials.length]);
+
   const levels = ["Creche", "Nursery", "Kindergarten", "Primary", "J.H.S."];
+
+  const handlePrevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const handleNextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
 
   return (
     <div className="w-full">
@@ -203,8 +237,81 @@ export default function Home() {
         </div>
       </section>
 
-      {/* School Overview Statistics */}
+      {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-[#0A2540] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What Parents Say
+            </h2>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              Hear from parents about their experience with Angels Hill Montessori School.
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Testimonial Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className={`bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 transition-all duration-500 ${
+                    index === currentTestimonial ? "ring-2 ring-[#F59E0B] scale-105" : "opacity-70"
+                  }`}
+                >
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 text-[#F59E0B]" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
+                  <p className="text-lg mb-6 leading-relaxed">"{testimonial.text}"</p>
+                  <div>
+                    <p className="font-semibold text-[#F59E0B]">{testimonial.author}</p>
+                    <p className="text-gray-300 text-sm">{testimonial.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Slider Controls */}
+            <div className="flex justify-center items-center gap-4">
+              <button
+                onClick={handlePrevTestimonial}
+                className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A2540] p-2 rounded-full transition-colors"
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              <div className="flex gap-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTestimonial(index)}
+                    className={`h-2 rounded-full transition-all ${
+                      index === currentTestimonial
+                        ? "bg-[#F59E0B] w-8"
+                        : "bg-white/30 w-2 hover:bg-white/50"
+                    }`}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ))}
+              </div>
+              <button
+                onClick={handleNextTestimonial}
+                className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A2540] p-2 rounded-full transition-colors"
+                aria-label="Next testimonial"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* School Overview Statistics */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
@@ -229,12 +336,12 @@ export default function Home() {
                 icon: <Trophy className="w-10 h-10 text-[#F59E0B]" />,
               },
             ].map((stat, idx) => (
-              <div key={idx} className="text-center p-8 bg-white/5 rounded-2xl border border-white/10">
+              <div key={idx} className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
                 <div className="flex justify-center mb-4">
                   {stat.icon}
                 </div>
-                <h4 className="text-2xl font-bold mb-2">{stat.label}</h4>
-                <p className="text-gray-300 font-medium">{stat.title}</p>
+                <h4 className="text-2xl font-bold text-[#0A2540] mb-2">{stat.label}</h4>
+                <p className="text-gray-600 font-medium">{stat.title}</p>
               </div>
             ))}
           </div>
