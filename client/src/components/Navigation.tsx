@@ -35,13 +35,12 @@ export default function Navigation() {
             <div className="bg-[#0A2540] p-1.5 rounded-lg flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
               <img
                 src="/assets/logo.png"
-                alt="ANGELS HILL MONTESSORI Logo"
+                alt="Angels Hill Montessori School Logo"
                 className="h-10 w-auto object-contain"
               />
             </div>
             <span className="hidden sm:inline font-bold text-[#0A2540] text-xl tracking-tight">
-              ANGELS HILL MONTESSORI
-            </span>
+              Angels Hill Montessori School</span>
           </Link>
 
           {/* Desktop Navigation */}
