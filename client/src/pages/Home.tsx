@@ -137,12 +137,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Why Parents Trust Us Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-4">
-              Why Parents Choose Angels Hill Montessori School
+              Why Parents Trust Angels Hill Montessori School
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Dedicated to nurturing young minds through a holistic approach that combines Montessori principles with modern educational excellence.
@@ -236,27 +236,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Parent Call-to-Action Section */}
       <section className="py-16 md:py-24 bg-[#F59E0B]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-4">
-            Give Your Child the Best Start
+            Give Your Child the Best Start in Life
           </h2>
           <p className="text-lg text-[#0A2540] mb-8 max-w-2xl mx-auto font-medium">
-            Join our vibrant learning community and watch your child thrive academically, socially, and emotionally.
+            At Angels Hill Montessori School, we are committed to helping every child discover their potential through quality education, strong values and a supportive learning environment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/admissions">
               <Button className="bg-[#0A2540] hover:bg-[#051d2d] text-white font-bold px-10 py-4 text-lg rounded-xl transition-all">
-                Enroll Now
+                Apply for Admission
               </Button>
             </Link>
-            <Link href="/about">
+            <Link href="/contact">
               <Button
                 variant="outline"
                 className="border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-bold px-10 py-4 text-lg rounded-xl transition-all"
               >
-                Learn More About Us
+                Contact the School
               </Button>
             </Link>
           </div>
