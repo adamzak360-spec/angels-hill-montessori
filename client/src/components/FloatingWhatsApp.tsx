@@ -5,8 +5,8 @@
  * - Always visible for quick contact
  */
 export default function FloatingWhatsApp() {
-  const whatsappNumber = "233243105412";
-  const whatsappMessage = "Hello! I'm interested in your services.";
+  const whatsappNumber = "233242367273";
+  const whatsappMessage = "Hello! I'm interested in Angels Hill Montessori School.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     whatsappMessage
   )}`;

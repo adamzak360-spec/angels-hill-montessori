@@ -306,7 +306,7 @@ export default function Home() {
               </Button>
             </Link>
             <a
-              href="https://wa.me/233243105412"
+              href="https://wa.me/233242367273"
               target="_blank"
               rel="noopener noreferrer"
             >

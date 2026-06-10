@@ -46,7 +46,7 @@ export default function Contact() {
       submitData.append("_next", `${window.location.origin}/contact-confirmation`);
 
       const response = await fetch(
-        "https://formsubmit.co/hope.services@ymail.com",
+        "https://formsubmit.co/info@angelshill.edu.gh",
         {
           method: "POST",
           body: submitData,
@@ -104,16 +104,10 @@ export default function Contact() {
               <h3 className="text-lg font-bold text-[#0A2540] mb-2">Phone</h3>
               <div className="space-y-2">
                 <a
-                  href="tel:+233372026054"
+                  href="tel:0242367273"
                   className="text-gray-700 hover:text-[#F59E0B] transition-colors block"
                 >
-                  +233 3720 26054
-                </a>
-                <a
-                  href="tel:+233243105412"
-                  className="text-gray-700 hover:text-[#F59E0B] transition-colors block"
-                >
-                  +233 243 105 412
+                  0242367273
                 </a>
               </div>
             </div>
@@ -125,10 +119,10 @@ export default function Contact() {
               </div>
               <h3 className="text-lg font-bold text-[#0A2540] mb-2">Email</h3>
               <a
-                href="mailto:hope.services@ymail.com"
+                href="mailto:info@angelshill.edu.gh"
                 className="text-gray-700 hover:text-[#F59E0B] transition-colors"
               >
-                hope.services@ymail.com
+                info@angelshill.edu.gh
               </a>
             </div>
 
@@ -141,7 +135,7 @@ export default function Contact() {
                 Location
               </h3>
               <p className="text-gray-700">
-                Angels Hill Montessori, Tamale, Ghana
+                Malshegu – Kumbuyili Road, Opp. St. Victor Major Seminary, Tamale, Ghana
               </p>
             </div>
 
@@ -260,18 +254,18 @@ export default function Contact() {
                 </h3>
                 <div className="space-y-4">
                   <a
-                    href="tel:+233243105412"
+                    href="tel:0242367273"
                     className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-[#F59E0B] hover:text-white transition-colors group"
                   >
                     <Phone className="w-6 h-6 text-[#F59E0B] group-hover:text-white" />
                     <div>
                       <p className="font-semibold">Call Us</p>
-                      <p className="text-sm">+233 243 105 412</p>
+                      <p className="text-sm">0242367273</p>
                     </div>
                   </a>
 
                   <a
-                    href="https://wa.me/233243105412"
+                    href="https://wa.me/233242367273"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-[#25D366] hover:text-white transition-colors group"
@@ -290,13 +284,13 @@ export default function Contact() {
                   </a>
 
                   <a
-                    href="mailto:hope.services@ymail.com"
+                    href="mailto:info@angelshill.edu.gh"
                     className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-[#F59E0B] hover:text-white transition-colors group"
                   >
                     <Mail className="w-6 h-6 text-[#F59E0B] group-hover:text-white" />
                     <div>
                       <p className="font-semibold">Email</p>
-                      <p className="text-sm">hope.services@ymail.com</p>
+                      <p className="text-sm">info@angelshill.edu.gh</p>
                     </div>
                   </a>
                 </div>

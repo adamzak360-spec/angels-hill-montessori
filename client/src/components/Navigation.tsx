@@ -18,12 +18,12 @@ export default function Navigation() {
 
   const navItems = [
     { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Job Listings", href: "/job-listings" },
-    { label: "Employers", href: "/employers" },
-    { label: "Job Seekers", href: "/job-seekers" },
-    { label: "Contact", href: "/contact" },
+    { label: "About Us", href: "/about" },
+    { label: "Academics", href: "/academics" },
+    { label: "Admissions", href: "/admissions" },
+    { label: "Gallery", href: "/gallery" },
+    { label: "News & Events", href: "/news" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   return (
