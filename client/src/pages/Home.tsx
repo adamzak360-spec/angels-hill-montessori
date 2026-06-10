@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, Users, Target, CheckCircle2 } from "lucide-react";
+import { ArrowRight, GraduationCap, Users, Heart, Trophy, CheckCircle2, CheckCircle } from "lucide-react";
 
 /**
  * Home Page
  * Design: Rebranded for Angels Hill Montessori School
- * Phase 1: Hero Section Rebrand
  */
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,7 +35,7 @@ export default function Home() {
     return () => clearInterval(timer);
   }, [slides.length]);
 
-  const stats = ["Creche", "Nursery", "Kindergarten", "Primary", "J.H.S."];
+  const levels = ["Creche", "Nursery", "Kindergarten", "Primary", "J.H.S."];
 
   return (
     <div className="w-full">
@@ -95,10 +94,10 @@ export default function Home() {
 
             {/* Stats/Levels */}
             <div className="flex flex-wrap gap-4 mb-10 animate-slide-up delay-300">
-              {stats.map((stat) => (
-                <div key={stat} className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-lg border border-white/20">
+              {levels.map((level) => (
+                <div key={level} className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-lg border border-white/20">
                   <CheckCircle2 className="w-5 h-5 text-[#F59E0B]" />
-                  <span className="text-white font-medium">{stat}</span>
+                  <span className="text-white font-medium">{level}</span>
                 </div>
               ))}
             </div>
@@ -138,185 +137,128 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section - Placeholder for Phase 2 */}
+      {/* Why Choose Us Section */}
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-4">
-              Why Choose Angels Hill Montessori School?
+              Why Parents Choose Angels Hill Montessori School
             </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              We connect talented professionals with leading employers across
-              Ghana, providing comprehensive recruitment and consultancy
-              services.
+              Dedicated to nurturing young minds through a holistic approach that combines Montessori principles with modern educational excellence.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center mb-4">
-                <Briefcase className="w-8 h-8 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Qualified Teachers",
+                description: "Our dedicated educators are professionally trained to nurture and guide every child's unique potential.",
+                icon: <Users className="w-8 h-8 text-white" />
+              },
+              {
+                title: "Safe Environment",
+                description: "A child-friendly, secure, and stimulating space where learners can grow with confidence.",
+                icon: <Heart className="w-8 h-8 text-white" />
+              },
+              {
+                title: "Montessori Approach",
+                description: "A child-centred method that encourages independent thinking, creativity, and self-discipline.",
+                icon: <GraduationCap className="w-8 h-8 text-white" />
+              },
+              {
+                title: "Character Development",
+                description: "Focusing on strong moral values, integrity, and leadership skills for lifelong success.",
+                icon: <Trophy className="w-8 h-8 text-white" />
+              },
+              {
+                title: "Modern Methods",
+                description: "Integrating contemporary teaching techniques with traditional Montessori foundations.",
+                icon: <CheckCircle className="w-8 h-8 text-white" />
+              },
+              {
+                title: "Comprehensive Programs",
+                description: "Quality education pathways serving learners from Creche through to Junior High School.",
+                icon: <ArrowRight className="w-8 h-8 text-white" />
+              }
+            ].map((feature, idx) => (
+              <div key={idx} className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+                <div className="w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold text-[#0A2540] mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-[#0A2540] mb-3">
-                Quality Recruitment
-              </h3>
-              <p className="text-gray-600">
-                We carefully match qualified candidates with the right job
-                opportunities, ensuring the best fit for both employers and job
-                seekers.
-              </p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center mb-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#0A2540] mb-3">
-                Expert Consultancy
-              </h3>
-              <p className="text-gray-600">
-                Our experienced consultants provide strategic advice to help
-                businesses build strong teams and develop their human resources.
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="bg-white rounded-lg shadow-md p-8 hover:shadow-lg transition-shadow duration-300">
-              <div className="w-16 h-16 bg-[#F59E0B] rounded-lg flex items-center justify-center mb-4">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-[#0A2540] mb-3">
-                Professional Training
-              </h3>
-              <p className="text-gray-600">
-                We offer comprehensive training programs to enhance skills and
-                prepare professionals for career advancement and success.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section - Job Seekers */}
+      {/* School Overview Statistics */}
       <section className="py-16 md:py-24 bg-[#0A2540] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Find Your Dream Job?
-              </h2>
-              <p className="text-gray-300 text-lg mb-8">
-                Browse our extensive job listings and apply to positions that
-                match your skills and career goals. Our team is here to support
-                your journey.
-              </p>
-              <Link href="/job-listings">
-                <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-black font-semibold px-8 py-3 text-lg">
-                  Explore Jobs <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-            </div>
-            <div className="bg-gray-800 rounded-lg p-8 border border-gray-700">
-              <h3 className="text-xl font-bold mb-4">Latest Opportunities</h3>
-              <ul className="space-y-3 text-gray-300">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#F59E0B] rounded-full" />
-                  Marketing Manager - Accra
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#F59E0B] rounded-full" />
-                  Software Developer - Kumasi
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#F59E0B] rounded-full" />
-                  HR Specialist - Tamale
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#F59E0B] rounded-full" />
-                  Sales Executive - Multiple Locations
-                </li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                label: "Creche to J.H.S.",
+                title: "Comprehensive Education",
+                icon: <GraduationCap className="w-10 h-10 text-[#F59E0B]" />,
+              },
+              {
+                label: "Child-Centred Learning",
+                title: "Montessori Approach",
+                icon: <Users className="w-10 h-10 text-[#F59E0B]" />,
+              },
+              {
+                label: "Safe Environment",
+                title: "Supportive Learning Community",
+                icon: <Heart className="w-10 h-10 text-[#F59E0B]" />,
+              },
+              {
+                label: "Academic Excellence",
+                title: "Preparing Future Leaders",
+                icon: <Trophy className="w-10 h-10 text-[#F59E0B]" />,
+              },
+            ].map((stat, idx) => (
+              <div key={idx} className="text-center p-8 bg-white/5 rounded-2xl border border-white/10">
+                <div className="flex justify-center mb-4">
+                  {stat.icon}
+                </div>
+                <h4 className="text-2xl font-bold mb-2">{stat.label}</h4>
+                <p className="text-gray-300 font-medium">{stat.title}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section - Employers */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 bg-white rounded-lg p-8 shadow-md border border-gray-200">
-              <h3 className="text-xl font-bold text-[#0A2540] mb-4">
-                Why Partner With Us?
-              </h3>
-              <ul className="space-y-3 text-gray-700">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#F59E0B] rounded-full" />
-                  Access to pre-screened talent pool
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#F59E0B] rounded-full" />
-                  Reduced hiring time and costs
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#F59E0B] rounded-full" />
-                  Professional recruitment support
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-[#F59E0B] rounded-full" />
-                  Ongoing HR consultancy services
-                </li>
-              </ul>
-            </div>
-            <div className="order-1 md:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-4">
-                Looking for Top Talent?
-              </h2>
-              <p className="text-gray-600 text-lg mb-8">
-                Post your job openings and reach qualified professionals across
-                Ghana. Our team will help you find the perfect candidates for
-                your organization.
-              </p>
-              <Link href="/employers">
-                <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-black font-semibold px-8 py-3 text-lg">
-                  Post a Job <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="py-16 bg-[#F59E0B]">
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-[#F59E0B]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-4">
-            Have Questions?
+            Give Your Child the Best Start
           </h2>
-          <p className="text-lg text-[#0A2540] mb-8 max-w-2xl mx-auto">
-            Get in touch with our team for more information about our services,
-            job opportunities, or to discuss your recruitment needs.
+          <p className="text-lg text-[#0A2540] mb-8 max-w-2xl mx-auto font-medium">
+            Join our vibrant learning community and watch your child thrive academically, socially, and emotionally.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
-              <Button className="bg-[#0A2540] hover:bg-[#051d2d] text-white font-semibold px-8 py-3 text-lg">
-                Contact Us
+              <Button className="bg-[#0A2540] hover:bg-[#051d2d] text-white font-bold px-10 py-4 text-lg rounded-xl transition-all">
+                Enroll Now
               </Button>
             </Link>
-            <a
-              href="https://wa.me/233242367273"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="/about">
               <Button
                 variant="outline"
-                className="border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-semibold px-8 py-3 text-lg"
+                className="border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-bold px-10 py-4 text-lg rounded-xl transition-all"
               >
-                Chat on WhatsApp
+                Learn More About Us
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
