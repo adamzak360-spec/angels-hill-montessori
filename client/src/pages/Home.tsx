@@ -17,7 +17,7 @@ export default function Home() {
       subtitle: "Quality Montessori Education from Creche to Junior High School in a Safe and Caring Learning Environment.",
     },
     {
-      video: "https://files.manuscdn.com/user_upload_by_module/session_file/310519663580544514/cSwMYWXxvJDloazn.mp4",
+      video: "/assets/teaching-palindromes.mp4",
       title: "Excellence in Education",
       subtitle: "Nurturing character and lifelong learning in every child.",
     },
