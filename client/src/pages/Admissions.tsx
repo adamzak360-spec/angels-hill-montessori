@@ -257,7 +257,7 @@ export default function Admissions() {
               {/* Map Embed */}
               <div className="rounded-lg overflow-hidden h-96 md:h-full min-h-96">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2356725698604!2d-0.6149999!3d9.4111111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfd4a0000000001%3A0x1234567890abcdef!2sAngels%20Hill%20Montessori%20School!5e0!3m2!1sen!2sgh!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0123!2d-0.8897!3d9.4788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfd43f4a5d729a47%3A0xca943cac641e79e1!2sAngels%20Hill%20Montessori!5e0!3m2!1sen!2sgh!4v1717927000000!5m2!1sen!2sgh"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
