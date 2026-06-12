@@ -9,6 +9,7 @@ import About from "./pages/About";
 import Academics from "./pages/Academics";
 import Admissions from "./pages/Admissions";
 import Gallery from "./pages/Gallery";
+import Videos from "./pages/Videos";
 import News from "./pages/News";
 import FAQ from "./pages/FAQ";
 import Jobs from "./pages/Jobs";
@@ -33,6 +34,7 @@ function Router() {
       <Route path={"/academics"} component={Academics} />
       <Route path={"/admissions"} component={Admissions} />
       <Route path={"/gallery"} component={Gallery} />
+      <Route path={"/videos"} component={Videos} />
       <Route path={"/news"} component={News} />
       <Route path={"/faq"} component={FAQ} />
       <Route path={"/jobs"} component={Jobs} />

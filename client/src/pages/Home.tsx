@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, GraduationCap, Users, Heart, Trophy, CheckCircle2, CheckCircle, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, GraduationCap, Users, Heart, Trophy, CheckCircle2, CheckCircle, ChevronLeft, ChevronRight, Play } from "lucide-react";
 
 /**
  * Home Page
@@ -237,6 +237,91 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Video Showcase Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-[#0A2540] via-[#1a4d7a] to-[#0A2540] text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#F59E0B] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F59E0B] rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F59E0B]/20 border border-[#F59E0B]/30 text-[#F59E0B] mb-6">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F59E0B] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F59E0B]"></span>
+              </span>
+              <span className="text-sm font-semibold tracking-wide uppercase">Video Gallery</span>
+            </div>
+            
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+              Experience Life at Angels Hill Montessori
+            </h2>
+            
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+              Watch our students engaged in meaningful learning, creative activities, and meaningful interactions with our dedicated educators. See the difference quality Montessori education makes.
+            </p>
+          </div>
+
+          {/* Featured Video Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                title: "Rose Flower Class Learning",
+                description: "Our Basic 1 class engaged in interactive Montessori activities",
+                image: "/assets/gallery/classroom-learning.jpg",
+                category: "Classroom"
+              },
+              {
+                title: "Teaching Palindromes",
+                description: "Creative language arts lesson with our dedicated educators",
+                image: "/assets/gallery/teacher-interaction.jpg",
+                category: "Language"
+              },
+              {
+                title: "Creative Expression",
+                description: "Students exploring creativity through hands-on activities",
+                image: "/assets/gallery/creative-activity.jpg",
+                category: "Arts"
+              }
+            ].map((video, idx) => (
+              <Link key={idx} href="/videos">
+                <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer h-64">
+                  <img
+                    src={video.image}
+                    alt={video.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
+                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <div className="bg-[#F59E0B]/20 border border-[#F59E0B]/30 text-[#F59E0B] px-3 py-1 rounded-full text-xs font-bold uppercase mb-3 w-fit">
+                      {video.category}
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-2">{video.title}</h3>
+                    <p className="text-gray-200 text-sm">{video.description}</p>
+                  </div>
+                  
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="w-14 h-14 bg-[#F59E0B] rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Play className="w-6 h-6 text-black fill-black" />
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <Link href="/videos">
+              <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-black font-bold px-10 py-4 text-lg rounded-xl shadow-lg shadow-[#F59E0B]/20 transition-all hover:scale-105">
+                Watch All Videos <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="py-16 md:py-24 bg-[#0A2540] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -336,8 +421,8 @@ export default function Home() {
                 icon: <Trophy className="w-10 h-10 text-[#F59E0B]" />,
               },
             ].map((stat, idx) => (
-              <div key={idx} className="text-center p-8 bg-gray-50 rounded-2xl border border-gray-200">
-                <div className="flex justify-center mb-4">
+              <div key={idx} className="text-center">
+                <div className="mb-4 flex justify-center">
                   {stat.icon}
                 </div>
                 <h4 className="text-2xl font-bold text-[#0A2540] mb-2">{stat.label}</h4>

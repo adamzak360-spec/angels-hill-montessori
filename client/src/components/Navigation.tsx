@@ -21,6 +21,7 @@ export default function Navigation() {
     { label: "About Us", href: "/about" },
     { label: "Academics", href: "/academics" },
     { label: "Admissions", href: "/admissions" },
+    { label: "Videos", href: "/videos" },
     { label: "Gallery", href: "/gallery" },
     { label: "News & Events", href: "/news" },
     { label: "FAQ", href: "/faq" },
