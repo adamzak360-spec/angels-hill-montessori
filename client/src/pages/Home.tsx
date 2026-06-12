@@ -269,20 +269,20 @@ export default function Home() {
               {
                 title: "Rose Flower Class Learning",
                 description: "Our Basic 1 class engaged in interactive Montessori activities",
-                image: "/assets/showcase-students-1.jpg",
+                image: "/assets/gallery/classroom-learning.jpg",
                 category: "Classroom"
               },
               {
                 title: "Teaching Palindromes",
                 description: "Creative language arts lesson with our dedicated educators",
-                image: "/assets/showcase-students-2.jpg",
+                image: "/assets/gallery/teacher-interaction.jpg",
                 category: "Language"
               },
               {
-                title: "Creative Expression",
-                description: "Students exploring creativity through hands-on activities",
-                image: "/assets/showcase-playground.png",
-                category: "Arts"
+                title: "Progress & Growth",
+                description: "Witness the remarkable journey of our students as they grow and excel",
+                image: "/assets/gallery/group-activity.jpg",
+                category: "Student Growth"
               }
             ].map((video, idx) => (
               <Link key={idx} href="/videos">
@@ -322,140 +322,113 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Call to Action */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-[#0A2540] rounded-3xl p-8 md:p-16 relative overflow-hidden shadow-2xl">
+            {/* Background Decoration */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#F59E0B] rounded-full blur-3xl opacity-10 -mr-20 -mt-20"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#F59E0B] rounded-full blur-3xl opacity-10 -ml-20 -mb-20"></div>
+            
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                  Ready to Join Our Learning Community?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Admissions are currently open for the 2025/2026 academic year. Give your child the gift of a Montessori education at Angels Hill.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/contact">
+                    <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-black font-bold px-8 py-4 rounded-xl shadow-lg shadow-[#F59E0B]/20 transition-all hover:scale-105">
+                      Apply Now
+                    </Button>
+                  </Link>
+                  <Link href="/contact">
+                    <Button variant="outline" className="border-white/30 text-white hover:bg-white hover:text-[#0A2540] font-bold px-8 py-4 rounded-xl transition-all hover:scale-105">
+                      Contact Admissions
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Quick Admission Facts</h3>
+                <ul className="space-y-4">
+                  {[
+                    "Creche to J.H.S. Levels",
+                    "Holistic Montessori Curriculum",
+                    "Safe & Secure Environment",
+                    "Highly Qualified Educators",
+                    "Modern Learning Facilities"
+                  ].map((fact, idx) => (
+                    <li key={idx} className="flex items-center gap-3 text-gray-200">
+                      <CheckCircle2 className="w-6 h-6 text-[#F59E0B]" />
+                      <span className="text-lg">{fact}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
-      <section className="py-16 md:py-24 bg-[#0A2540] text-white">
+      <section className="py-16 md:py-24 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              What Parents Say
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-4">
+              What Our Parents Say
             </h2>
-            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-              Hear from parents about their experience with Angels Hill Montessori School.
-            </p>
+            <div className="w-20 h-1.5 bg-[#F59E0B] mx-auto rounded-full"></div>
           </div>
 
-          <div className="relative">
+          <div className="relative max-w-4xl mx-auto">
             {/* Testimonial Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="relative h-[300px] md:h-[250px]">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className={`bg-white/10 backdrop-blur-md rounded-xl p-8 border border-white/20 transition-all duration-500 ${
-                    index === currentTestimonial ? "ring-2 ring-[#F59E0B] scale-105" : "opacity-70"
+                  className={`absolute inset-0 transition-all duration-700 transform ${
+                    index === currentTestimonial
+                      ? "opacity-100 translate-x-0"
+                      : "opacity-0 translate-x-full"
                   }`}
                 >
-                  <div className="flex gap-1 mb-4">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-[#F59E0B]" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                    ))}
-                  </div>
-                  <p className="text-lg mb-6 leading-relaxed">"{testimonial.text}"</p>
-                  <div>
-                    <p className="font-semibold text-[#F59E0B]">{testimonial.author}</p>
-                    <p className="text-gray-300 text-sm">{testimonial.role}</p>
+                  <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center relative">
+                    <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 bg-[#F59E0B] rounded-full flex items-center justify-center shadow-lg">
+                      <span className="text-4xl text-black font-serif leading-none mt-4">"</span>
+                    </div>
+                    <p className="text-xl md:text-2xl text-gray-600 italic mb-8 leading-relaxed">
+                      {testimonial.text}
+                    </p>
+                    <div>
+                      <h4 className="text-lg font-bold text-[#0A2540]">{testimonial.author}</h4>
+                      <p className="text-[#F59E0B] font-medium">{testimonial.role}</p>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Slider Controls */}
-            <div className="flex justify-center items-center gap-4">
+            {/* Navigation Buttons */}
+            <div className="flex justify-center gap-4 mt-8">
               <button
                 onClick={handlePrevTestimonial}
-                className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A2540] p-2 rounded-full transition-colors"
+                className="p-3 rounded-full bg-white shadow-md hover:bg-[#F59E0B] hover:text-white transition-all text-[#0A2540]"
                 aria-label="Previous testimonial"
               >
                 <ChevronLeft className="w-6 h-6" />
               </button>
-              <div className="flex gap-2">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`h-2 rounded-full transition-all ${
-                      index === currentTestimonial
-                        ? "bg-[#F59E0B] w-8"
-                        : "bg-white/30 w-2 hover:bg-white/50"
-                    }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
-                ))}
-              </div>
               <button
                 onClick={handleNextTestimonial}
-                className="bg-[#F59E0B] hover:bg-[#D97706] text-[#0A2540] p-2 rounded-full transition-colors"
+                className="p-3 rounded-full bg-white shadow-md hover:bg-[#F59E0B] hover:text-white transition-all text-[#0A2540]"
                 aria-label="Next testimonial"
               >
                 <ChevronRight className="w-6 h-6" />
               </button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* School Overview Statistics */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                label: "Creche to J.H.S.",
-                title: "Comprehensive Education",
-                icon: <GraduationCap className="w-10 h-10 text-[#F59E0B]" />,
-              },
-              {
-                label: "Child-Centred Learning",
-                title: "Montessori Approach",
-                icon: <Users className="w-10 h-10 text-[#F59E0B]" />,
-              },
-              {
-                label: "Safe Environment",
-                title: "Supportive Learning Community",
-                icon: <Heart className="w-10 h-10 text-[#F59E0B]" />,
-              },
-              {
-                label: "Academic Excellence",
-                title: "Preparing Future Leaders",
-                icon: <Trophy className="w-10 h-10 text-[#F59E0B]" />,
-              },
-            ].map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <div className="mb-4 flex justify-center">
-                  {stat.icon}
-                </div>
-                <h4 className="text-2xl font-bold text-[#0A2540] mb-2">{stat.label}</h4>
-                <p className="text-gray-600 font-medium">{stat.title}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Parent Call-to-Action Section */}
-      <section className="py-16 md:py-24 bg-[#F59E0B]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540] mb-4">
-            Give Your Child the Best Start in Life
-          </h2>
-          <p className="text-lg text-[#0A2540] mb-8 max-w-2xl mx-auto font-medium">
-            At Angels Hill Montessori School, we are committed to helping every child discover their potential through quality education, strong values and a supportive learning environment.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/admissions">
-              <Button className="bg-[#0A2540] hover:bg-[#051d2d] text-white font-bold px-10 py-4 text-lg rounded-xl transition-all">
-                Apply for Admission
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button
-                variant="outline"
-                className="border-[#0A2540] text-[#0A2540] hover:bg-[#0A2540] hover:text-white font-bold px-10 py-4 text-lg rounded-xl transition-all"
-              >
-                Contact the School
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
