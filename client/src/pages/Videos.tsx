@@ -40,21 +40,21 @@ export default function Videos() {
     },
     {
       id: 3,
-      src: "/assets/gallery/group-activity.jpg",
+      src: "/assets/videos/progress-growth.mp4",
       thumbnail: "/assets/gallery/group-activity.jpg",
-      title: "Group Activities & Collaboration",
-      description: "Students working together in collaborative group activities that foster teamwork and social skills.",
-      category: "Social Development",
-      date: "2025"
+      title: "Progress You Can See, Growth You Can Feel",
+      description: "Witness the remarkable journey of our students as they grow, learn, and excel in our supportive Montessori environment.",
+      category: "Student Growth",
+      date: "2026"
     },
     {
       id: 4,
-      src: "/assets/gallery/creative-activity.jpg",
+      src: "/assets/videos/memories.mp4",
       thumbnail: "/assets/gallery/creative-activity.jpg",
-      title: "Creative Expression Workshop",
-      description: "Students exploring their creativity through hands-on art and craft activities in our well-equipped studios.",
-      category: "Creative Arts",
-      date: "2025"
+      title: "School Memories & Milestones",
+      description: "A collection of beautiful moments and significant milestones captured throughout the school year at Angels Hill.",
+      category: "School Life",
+      date: "2026"
     },
     {
       id: 5,
@@ -337,61 +337,31 @@ export default function Videos() {
                   </div>
                 </div>
               </div>
+              
+              {/* Decorative Elements */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-[#F59E0B] rounded-full -z-10 opacity-20"></div>
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-[#0A2540] rounded-full -z-10 opacity-10"></div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Gallery Link Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-[#0A2540] to-[#1a4d7a] rounded-2xl p-8 md:p-12 text-white text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Want to See More?
-            </h2>
-            <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-              Explore our photo gallery for more moments from school life, or schedule a visit to experience Angels Hill Montessori School in person.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/gallery">
-                <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-black font-bold px-10 py-4 text-lg rounded-xl transition-all hover:scale-105">
-                  View Photo Gallery <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-[#0A2540] font-bold px-10 py-4 text-lg rounded-xl transition-all hover:scale-105"
-                >
-                  Schedule a Visit
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-[#0A2540] text-white">
+      {/* Call to Action */}
+      <section className="py-16 bg-[#0A2540] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Join Angels Hill Montessori School?
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to See Our School in Person?</h2>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Enroll your child in a school that prioritizes quality education, character development, and holistic growth.
+            Explore our photo gallery for more moments from school life, or schedule a visit to experience Angels Hill Montessori School in person.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/admissions">
-              <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-black font-bold px-10 py-4 text-lg rounded-xl transition-all hover:scale-105">
-                Apply for Admission <ArrowRight className="ml-2 w-5 h-5" />
+            <Link href="/gallery">
+              <Button className="bg-[#F59E0B] hover:bg-[#D97706] text-black px-8 py-6 rounded-xl text-lg font-bold">
+                View Photo Gallery
               </Button>
             </Link>
             <Link href="/contact">
-              <Button
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[#0A2540] font-bold px-10 py-4 text-lg rounded-xl transition-all hover:scale-105"
-              >
-                Contact Us
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-[#0A2540] px-8 py-6 rounded-xl text-lg font-bold">
+                Schedule a Visit
               </Button>
             </Link>
           </div>
