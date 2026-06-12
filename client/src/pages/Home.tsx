@@ -269,19 +269,19 @@ export default function Home() {
               {
                 title: "Rose Flower Class Learning",
                 description: "Our Basic 1 class engaged in interactive Montessori activities",
-                image: "/assets/gallery/classroom-learning.jpg",
+                image: "/assets/showcase-students-1.jpg",
                 category: "Classroom"
               },
               {
                 title: "Teaching Palindromes",
                 description: "Creative language arts lesson with our dedicated educators",
-                image: "/assets/gallery/teacher-interaction.jpg",
+                image: "/assets/showcase-students-2.jpg",
                 category: "Language"
               },
               {
                 title: "Creative Expression",
                 description: "Students exploring creativity through hands-on activities",
-                image: "/assets/gallery/creative-activity.jpg",
+                image: "/assets/showcase-playground.png",
                 category: "Arts"
               }
             ].map((video, idx) => (
