@@ -58,12 +58,12 @@ export default function Videos() {
     },
     {
       id: 5,
-      src: "/assets/gallery/reading-session.jpg",
+      src: "/assets/videos/lily-flower-class.mp4",
       thumbnail: "/assets/gallery/reading-session.jpg",
-      title: "Reading & Literacy Sessions",
-      description: "Fostering a love for reading and language development in our vibrant library environment.",
-      category: "Literacy",
-      date: "2025"
+      title: "Lily Flower Class Activities",
+      description: "Step into the Lily Flower class to see our young learners exploring, discovering, and growing together.",
+      category: "Classroom Learning",
+      date: "2026"
     },
     {
       id: 6,
