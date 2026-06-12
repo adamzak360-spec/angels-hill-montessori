@@ -20,40 +20,22 @@ export default function Gallery() {
 
   const galleryImages = [
     {
-      src: "/assets/gallery/classroom-learning.jpg",
-      alt: "Classroom Learning",
-      title: "Classroom Learning",
-      description: "Students engaged in self-directed Montessori learning activities"
+      src: "/assets/gallery/student-speech.webp",
+      alt: "Student Speech",
+      title: "Student Speech",
+      description: "A student confidently delivering a speech during a school event."
     },
     {
-      src: "/assets/gallery/teacher-interaction.jpg",
-      alt: "Teacher-Student Interaction",
-      title: "Teacher-Student Interaction",
-      description: "Personalized guidance and support from our dedicated educators"
+      src: "/assets/gallery/student-group-1.jpg",
+      alt: "Students Group",
+      title: "Vibrant Student Community",
+      description: "Our students enjoying a moment together, showcasing our diverse and friendly environment."
     },
     {
-      src: "/assets/gallery/group-activity.jpg",
-      alt: "Group Activities",
-      title: "Group Activities",
-      description: "Collaborative learning and social development through group work"
-    },
-    {
-      src: "/assets/gallery/reading-session.jpg",
-      alt: "Reading Sessions",
-      title: "Reading Sessions",
-      description: "Fostering a love for reading in our well-equipped library"
-    },
-    {
-      src: "/assets/gallery/school-environment.jpg",
-      alt: "School Environment",
-      title: "School Environment",
-      description: "Safe, modern, and welcoming learning spaces"
-    },
-    {
-      src: "/assets/gallery/creative-activity.jpg",
-      alt: "Creative Activities",
-      title: "Creative Activities",
-      description: "Nurturing creativity and artistic expression through hands-on activities"
+      src: "/assets/gallery/student-group-2.jpg",
+      alt: "Students Group Activities",
+      title: "Learning and Fun",
+      description: "Capturing the joy and camaraderie of our students during school hours."
     }
   ];
 
@@ -161,10 +143,9 @@ export default function Gallery() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="/assets/gallery/classroom-learning.jpg" alt="Classroom" className="rounded-lg shadow-lg h-48 w-full object-cover" />
-              <img src="/assets/gallery/teacher-interaction.jpg" alt="Teacher" className="rounded-lg shadow-lg h-48 w-full object-cover" />
-              <img src="/assets/gallery/group-activity.jpg" alt="Group Activity" className="rounded-lg shadow-lg h-48 w-full object-cover" />
-              <img src="/assets/gallery/creative-activity.jpg" alt="Creative" className="rounded-lg shadow-lg h-48 w-full object-cover" />
+              <img src="/assets/gallery/student-speech.webp" alt="Student Speech" className="rounded-lg shadow-lg h-48 w-full object-cover" />
+              <img src="/assets/gallery/student-group-1.jpg" alt="Student Group" className="rounded-lg shadow-lg h-48 w-full object-cover" />
+              <img src="/assets/gallery/student-group-2.jpg" alt="Student Group Activities" className="rounded-lg shadow-lg h-48 w-full object-cover" />
             </div>
           </div>
         </div>
