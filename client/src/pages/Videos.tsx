@@ -22,7 +22,7 @@ export default function Videos() {
   const videos = [
     {
       id: 1,
-      src: "/assets/videos/rose-flower-class.mp4",
+      src: "/assets/rose-flower-class.mp4",
       thumbnail: "/assets/gallery/classroom-learning.jpg",
       title: "Rose Flower Class Learning",
       description: "Our Basic 1 class named after the beautiful Rose Flower - students engaged in interactive Montessori learning activities.",
@@ -40,7 +40,7 @@ export default function Videos() {
     },
     {
       id: 3,
-      src: "/assets/videos/progress-growth.mp4",
+      src: "/assets/progress-growth.mp4",
       thumbnail: "/assets/gallery/group-activity.jpg",
       title: "Progress You Can See, Growth You Can Feel",
       description: "Witness the remarkable journey of our students as they grow, learn, and excel in our supportive Montessori environment.",
@@ -49,7 +49,7 @@ export default function Videos() {
     },
     {
       id: 4,
-      src: "/assets/videos/memories.mp4",
+      src: "/assets/memories.mp4",
       thumbnail: "/assets/gallery/creative-activity.jpg",
       title: "School Memories & Milestones",
       description: "A collection of beautiful moments and significant milestones captured throughout the school year at Angels Hill.",
@@ -58,12 +58,12 @@ export default function Videos() {
     },
     {
       id: 5,
-      src: "/assets/gallery/reading-session.jpg",
+      src: "/assets/lily-flower-class.mp4",
       thumbnail: "/assets/gallery/reading-session.jpg",
-      title: "Reading & Literacy Sessions",
-      description: "Fostering a love for reading and language development in our vibrant library environment.",
-      category: "Literacy",
-      date: "2025"
+      title: "Lily Flower Class Activities",
+      description: "Step into the Lily Flower class to see our young learners exploring, discovering, and growing together.",
+      category: "Classroom Learning",
+      date: "2026"
     },
     {
       id: 6,
